@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="113dp"
+        android:layout_height="20dp"
+        android:text="Log Workout"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="89dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/weightEditText"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Weight"
+        android:layout_marginLeft="85dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="26dp"
+        app:layout_constraintTop_toBottomOf="@+id/ExerciseTextView" />
+
+    <EditText
+        android:id="@+id/setsEditText"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Sets"
+        android:layout_marginTop="37dp"
+        app:layout_constraintTop_toBottomOf="@+id/weightEditText"
+        app:layout_constraintLeft_toRightOf="@+id/decrementerS"
+        android:layout_marginLeft="20dp" />
+
+    <EditText
+        android:id="@+id/repsEditText"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Reps"
+        android:layout_marginTop="31dp"
+        app:layout_constraintTop_toBottomOf="@+id/setsEditText"
+        app:layout_constraintLeft_toRightOf="@+id/decrementerR"
+        android:layout_marginLeft="20dp" />
+
+    <Button
+        android:id="@+id/logButton"
+        android:layout_width="214dp"
+        android:layout_height="37dp"
+        android:text="log"
+        android:layout_marginTop="53dp"
+        app:layout_constraintTop_toBottomOf="@+id/repsEditText"
+        android:layout_marginLeft="85dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:onClick="logWorkOut"
+        />
+
+    <Button
+        android:id="@+id/incrementerS"
+        android:layout_width="49dp"
+        android:layout_height="41dp"
+        android:text="+"
+        android:layout_marginTop="41dp"
+        app:layout_constraintTop_toBottomOf="@+id/incrementerW"
+        app:layout_constraintLeft_toRightOf="@+id/setsEditText"
+        android:layout_marginLeft="19dp"
+        android:onClick="increment"
+        />
+
+    <Button
+        android:id="@+id/incrementerW"
+        android:layout_width="49dp"
+        android:layout_height="41dp"
+        android:text="+"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="185dp"
+        app:layout_constraintLeft_toRightOf="@+id/weightEditText"
+        android:layout_marginLeft="19dp"
+        android:onClick="increment"
+        />
+
+    <Button
+        android:id="@+id/decrementerW"
+        android:layout_width="49dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="16dp"
+        android:text="-"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="187dp"
+        android:onClick="decrement" />
+
+    <Button
+        android:id="@+id/decrementerR"
+        android:layout_width="49dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="16dp"
+        android:text="-"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/decrementerS"
+        android:onClick="decrement"/>
+
+    <Button
+        android:id="@+id/decrementerS"
+        android:layout_width="49dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="16dp"
+        android:text="-"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="39dp"
+        app:layout_constraintTop_toBottomOf="@+id/decrementerW"
+        android:onClick="decrement"/>
+
+    <Button
+        android:id="@+id/incrementerR"
+        android:layout_width="49dp"
+        android:layout_height="41dp"
+        android:text="+"
+        android:layout_marginTop="33dp"
+        app:layout_constraintTop_toBottomOf="@+id/incrementerS"
+        app:layout_constraintLeft_toRightOf="@+id/repsEditText"
+        android:layout_marginLeft="19dp"
+        android:onClick="increment" />
+
+    <AutoCompleteTextView
+        android:id="@+id/ExerciseTextView"
+        android:layout_width="203dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="94dp"
+        android:layout_marginTop="113dp"
+        android:hint="Excercise"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
